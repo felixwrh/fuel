@@ -1,15 +1,15 @@
 package com.github.kittinunf.fuel.core.extensions
 
-import com.github.kittinunf.fuel.core.requests.DefaultRequest
 import com.github.kittinunf.fuel.core.Headers
 import com.github.kittinunf.fuel.core.Method
 import com.github.kittinunf.fuel.core.Request
+import com.github.kittinunf.fuel.core.requests.DefaultRequest
 import com.github.kittinunf.fuel.util.encodeBase64ToString
+import java.net.URL
 import org.hamcrest.CoreMatchers.equalTo
 import org.hamcrest.CoreMatchers.isA
 import org.hamcrest.MatcherAssert.assertThat
 import org.junit.Test
-import java.net.URL
 
 class AuthenticationTest {
     @Test

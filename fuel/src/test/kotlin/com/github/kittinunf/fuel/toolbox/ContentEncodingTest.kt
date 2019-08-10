@@ -5,16 +5,16 @@ import com.github.kittinunf.fuel.core.Headers
 import com.github.kittinunf.fuel.core.Method
 import com.github.kittinunf.fuel.core.awaitByteArrayResponseResult
 import com.github.kittinunf.fuel.test.MockHttpTestCase
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.runBlocking
-import kotlinx.coroutines.withContext
-import org.junit.Assert.assertArrayEquals
-import org.mockserver.model.Header
 import java.io.ByteArrayOutputStream
 import java.util.zip.GZIPOutputStream
 import kotlin.test.Test
 import kotlin.test.assertNotNull
 import kotlin.test.assertNull
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.withContext
+import org.junit.Assert.assertArrayEquals
+import org.mockserver.model.Header
 
 class ContentEncodingTest : MockHttpTestCase() {
     @Test

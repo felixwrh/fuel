@@ -5,16 +5,16 @@ import com.github.kittinunf.fuel.core.Method
 import com.github.kittinunf.fuel.core.awaitStringResponseResult
 import com.github.kittinunf.fuel.test.MockHttpTestCase
 import com.google.common.net.MediaType
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.runBlocking
-import kotlinx.coroutines.withContext
-import org.mockserver.model.BinaryBody
-import org.mockserver.model.Delay
 import java.io.File
 import java.util.Random
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertNotNull
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.withContext
+import org.mockserver.model.BinaryBody
+import org.mockserver.model.Delay
 
 class ResponseProgressTest : MockHttpTestCase() {
 

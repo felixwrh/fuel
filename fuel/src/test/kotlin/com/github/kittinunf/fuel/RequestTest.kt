@@ -12,6 +12,12 @@ import com.github.kittinunf.fuel.core.extensions.jsonBody
 import com.github.kittinunf.fuel.test.MockHttpTestCase
 import com.github.kittinunf.fuel.util.decodeBase64
 import com.google.common.net.MediaType
+import java.net.HttpURLConnection
+import java.util.Random
+import kotlin.test.Test
+import kotlin.test.assertEquals
+import kotlin.test.assertNotNull
+import kotlin.test.assertNull
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
@@ -20,12 +26,6 @@ import org.hamcrest.MatcherAssert.assertThat
 import org.json.JSONArray
 import org.json.JSONObject
 import org.mockserver.model.BinaryBody
-import java.net.HttpURLConnection
-import java.util.Random
-import kotlin.test.Test
-import kotlin.test.assertEquals
-import kotlin.test.assertNotNull
-import kotlin.test.assertNull
 
 class RequestTest : MockHttpTestCase() {
 

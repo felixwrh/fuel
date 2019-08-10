@@ -1,16 +1,10 @@
 package com.github.kittinunf.fuel
 
-import com.github.kittinunf.fuel.core.Method
-import com.github.kittinunf.fuel.core.awaitByteArrayResponseResult
 import com.github.kittinunf.fuel.test.MockHttpTestCase
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.runBlocking
-import kotlinx.coroutines.withContext
-import org.junit.After
-import org.junit.Before
-import org.junit.Test
 import java.io.ByteArrayOutputStream
 import java.io.PrintStream
+import org.junit.After
+import org.junit.Before
 
 class ReadmeIntegrityTest : MockHttpTestCase() {
 
@@ -29,7 +23,7 @@ class ReadmeIntegrityTest : MockHttpTestCase() {
         System.setOut(originalOut)
     }
 
-    //TODO: it is not really Testing anything?
+    // TODO: it is not really Testing anything?
     /*@Test
     fun makingRequestsAboutPatchRequests() = runBlocking {
         mock.chain(

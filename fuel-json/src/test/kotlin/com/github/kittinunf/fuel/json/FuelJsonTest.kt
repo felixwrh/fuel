@@ -3,19 +3,19 @@ package com.github.kittinunf.fuel.json
 import com.github.kittinunf.fuel.core.FuelManager
 import com.github.kittinunf.fuel.httpGet
 import com.github.kittinunf.fuel.test.MockHelper
+import java.net.HttpURLConnection
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
 import org.hamcrest.core.Is.isA
 import org.json.JSONObject
-import org.junit.Assert.assertEquals
-import org.junit.Assert.assertNull
-import org.junit.Assert.assertNotNull
-import org.junit.Assert.assertThat
 import org.junit.After
+import org.junit.Assert.assertEquals
+import org.junit.Assert.assertNotNull
+import org.junit.Assert.assertNull
+import org.junit.Assert.assertThat
 import org.junit.Before
 import org.junit.Test
-import java.net.HttpURLConnection
 
 class FuelJsonTest {
     private lateinit var mock: MockHelper

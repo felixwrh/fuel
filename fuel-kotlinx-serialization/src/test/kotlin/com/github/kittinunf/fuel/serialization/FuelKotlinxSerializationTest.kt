@@ -4,17 +4,17 @@ import com.github.kittinunf.fuel.Fuel
 import com.github.kittinunf.fuel.core.FuelError
 import com.github.kittinunf.fuel.test.MockHttpTestCase
 import com.github.kittinunf.result.Result
-import kotlinx.serialization.ImplicitReflectionSerializer
-import kotlinx.serialization.Serializable
+import java.net.HttpURLConnection
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
-import org.junit.Assert.assertFalse
+import kotlinx.serialization.ImplicitReflectionSerializer
+import kotlinx.serialization.Serializable
 import org.junit.Assert.assertEquals
-import org.junit.Assert.assertNull
+import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNotNull
+import org.junit.Assert.assertNull
 import org.junit.Test
-import java.net.HttpURLConnection
 
 @ImplicitReflectionSerializer
 class FuelKotlinxSerializationTest : MockHttpTestCase() {
@@ -28,7 +28,7 @@ class FuelKotlinxSerializationTest : MockHttpTestCase() {
         )
 
         val (res, result) = withContext(Dispatchers.IO) {
-           Fuel.get(mock.path("issues/1")).awaitResponseResultObject<IssueInfo>()
+            Fuel.get(mock.path("issues/1")).awaitResponseResultObject<IssueInfo>()
         }
         assertNotNull(res)
         assertNotNull(result)
@@ -47,7 +47,7 @@ class FuelKotlinxSerializationTest : MockHttpTestCase() {
             response = mock.response().withStatusCode(HttpURLConnection.HTTP_NOT_FOUND)
         )
         val (res, result) = withContext(Dispatchers.IO) {
-           Fuel.get(mock.path("issues/1")).awaitResponseResultObject<IssueInfo>()
+            Fuel.get(mock.path("issues/1")).awaitResponseResultObject<IssueInfo>()
         }
         assertNotNull(res)
         assertNotNull(result)

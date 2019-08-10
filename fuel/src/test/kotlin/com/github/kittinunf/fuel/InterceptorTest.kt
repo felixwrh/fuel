@@ -8,21 +8,21 @@ import com.github.kittinunf.fuel.core.interceptors.LogRequestAsCurlInterceptor
 import com.github.kittinunf.fuel.core.interceptors.LogRequestInterceptor
 import com.github.kittinunf.fuel.core.interceptors.LogResponseInterceptor
 import com.github.kittinunf.fuel.test.MockHttpTestCase
+import java.io.ByteArrayOutputStream
+import java.io.PrintStream
+import java.net.HttpURLConnection
+import kotlin.test.AfterTest
+import kotlin.test.BeforeTest
+import kotlin.test.Test
+import kotlin.test.assertEquals
+import kotlin.test.assertNotNull
+import kotlin.test.assertNull
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
 import org.hamcrest.CoreMatchers.containsString
 import org.hamcrest.CoreMatchers.not
 import org.junit.Assert.assertThat
-import java.io.ByteArrayOutputStream
-import java.io.PrintStream
-import java.net.HttpURLConnection
-import kotlin.test.Test
-import kotlin.test.AfterTest
-import kotlin.test.BeforeTest
-import kotlin.test.assertEquals
-import kotlin.test.assertNotNull
-import kotlin.test.assertNull
 
 class InterceptorTest : MockHttpTestCase() {
 

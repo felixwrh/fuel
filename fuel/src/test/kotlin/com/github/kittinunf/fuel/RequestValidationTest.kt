@@ -6,6 +6,9 @@ import com.github.kittinunf.fuel.core.Method
 import com.github.kittinunf.fuel.core.awaitByteArrayResponseResult
 import com.github.kittinunf.fuel.core.awaitStringResponseResult
 import com.github.kittinunf.fuel.test.MockHttpTestCase
+import kotlin.test.assertEquals
+import kotlin.test.assertNotNull
+import kotlin.test.assertNull
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
@@ -13,9 +16,6 @@ import org.hamcrest.CoreMatchers.containsString
 import org.hamcrest.CoreMatchers.isA
 import org.junit.Assert.assertThat
 import org.junit.Test
-import kotlin.test.assertEquals
-import kotlin.test.assertNotNull
-import kotlin.test.assertNull
 
 class RequestValidationTest : MockHttpTestCase() {
     @Test
@@ -72,7 +72,7 @@ class RequestValidationTest : MockHttpTestCase() {
         assertNotNull(anotherError)
         assertNotNull(anotherError.errorData)
 
-        assertEquals(anotherResponse.statusCode,501)
+        assertEquals(anotherResponse.statusCode, 501)
     }
 
     @Test

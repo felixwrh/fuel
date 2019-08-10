@@ -6,9 +6,9 @@ import com.github.kittinunf.fuel.core.awaitResponseResult
 import com.squareup.moshi.JsonAdapter
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.Types
-import okio.Okio
 import java.io.InputStream
 import java.lang.reflect.Type
+import okio.Okio
 
 val defaultMoshi = Moshi.Builder()
 
@@ -27,7 +27,7 @@ fun <T : Any> moshiDeserializerOf(clazz: Class<T>) = object : ResponseDeserializ
             .fromJson(content)
 }
 
-fun <T: Any> moshiDeserializerOf(type: Type) = object : ResponseDeserializable<T> {
+fun <T : Any> moshiDeserializerOf(type: Type) = object : ResponseDeserializable<T> {
     override fun deserialize(content: String): T? = defaultMoshi
             .build()
             .adapter<T>(type)

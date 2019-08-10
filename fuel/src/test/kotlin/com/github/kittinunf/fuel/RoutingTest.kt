@@ -9,17 +9,17 @@ import com.github.kittinunf.fuel.test.MockHttpTestCase
 import com.github.kittinunf.fuel.util.FuelRouting
 import com.github.kittinunf.fuel.util.decodeBase64ToString
 import com.github.kittinunf.fuel.util.encodeBase64
+import java.net.HttpURLConnection
+import kotlin.test.Test
+import kotlin.test.assertEquals
+import kotlin.test.assertNotNull
+import kotlin.test.assertNull
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
 import org.hamcrest.CoreMatchers.containsString
 import org.json.JSONObject
 import org.junit.Assert.assertThat
-import java.net.HttpURLConnection
-import kotlin.test.Test
-import kotlin.test.assertEquals
-import kotlin.test.assertNotNull
-import kotlin.test.assertNull
 
 class RoutingTest : MockHttpTestCase() {
     private val manager: FuelManager by lazy { FuelManager() }

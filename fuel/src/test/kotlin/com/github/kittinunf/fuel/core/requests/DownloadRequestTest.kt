@@ -1,28 +1,28 @@
 package com.github.kittinunf.fuel.core.requests
 
-import com.github.kittinunf.fuel.core.awaitByteArrayResponseResult
-import com.github.kittinunf.fuel.core.awaitStringResponseResult
 import com.github.kittinunf.fuel.core.FuelManager
 import com.github.kittinunf.fuel.core.Method
 import com.github.kittinunf.fuel.core.ResponseResultOf
+import com.github.kittinunf.fuel.core.awaitByteArrayResponseResult
+import com.github.kittinunf.fuel.core.awaitStringResponseResult
 import com.github.kittinunf.fuel.test.MockHttpTestCase
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.runBlocking
-import kotlinx.coroutines.withContext
 import com.google.common.net.MediaType
-import org.hamcrest.core.Is.isA
-import org.junit.Assert.assertThat
-import org.mockserver.model.BinaryBody
-import org.mockserver.model.Delay
 import java.io.ByteArrayInputStream
 import java.io.ByteArrayOutputStream
 import java.io.File
 import java.io.IOException
 import java.net.HttpURLConnection
 import java.util.Random
+import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertNotNull
-import kotlin.test.Test
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.withContext
+import org.hamcrest.core.Is.isA
+import org.junit.Assert.assertThat
+import org.mockserver.model.BinaryBody
+import org.mockserver.model.Delay
 
 class DownloadRequestTest : MockHttpTestCase() {
 
@@ -188,7 +188,7 @@ class DownloadRequestTest : MockHttpTestCase() {
                     val dir = System.getProperty("user.dir")
                     File.createTempFile("not_found_file", null, File(dir, "not-a-folder"))
                 }
-               .awaitStringResponseResult()
+                .awaitStringResponseResult()
         }
         val (data, error) = result
 

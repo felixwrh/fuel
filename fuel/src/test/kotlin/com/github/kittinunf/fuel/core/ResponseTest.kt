@@ -1,9 +1,9 @@
 package com.github.kittinunf.fuel.core
 
+import java.net.URL
 import org.hamcrest.CoreMatchers.equalTo
 import org.hamcrest.MatcherAssert.assertThat
 import org.junit.Test
-import java.net.URL
 
 class ResponseTest {
     @Test

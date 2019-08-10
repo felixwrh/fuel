@@ -9,18 +9,17 @@ import com.github.kittinunf.forge.util.create
 import com.github.kittinunf.fuel.Fuel
 import com.github.kittinunf.fuel.core.HttpException
 import com.github.kittinunf.fuel.test.MockHttpTestCase
-import com.github.kittinunf.result.Result
+import java.net.HttpURLConnection
+import kotlin.test.Test
+import kotlin.test.assertEquals
+import kotlin.test.assertNotNull
+import kotlin.test.assertNull
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
 import org.hamcrest.CoreMatchers.isA
 import org.json.JSONException
 import org.junit.Assert.assertThat
-import java.net.HttpURLConnection
-import kotlin.test.assertEquals
-import kotlin.test.assertNotNull
-import kotlin.test.assertNull
-import kotlin.test.Test
 
 class FuelForgeTest : MockHttpTestCase() {
     data class HttpBinUserAgentModel(val userAgent: String, val status: Int)
@@ -109,10 +108,10 @@ class FuelForgeTest : MockHttpTestCase() {
 
     @Test
     fun `check forgeDeserializerOf is equal to 123`() {
-       val content = """ { "id": 123, "title": "title1", "number": 1 } """
-       val issue = forgeDeserializerOf(issueInfoDeserializer).deserialize(content)
-       assertNotNull(issue)
-       assertEquals(issue.id, 123)
+        val content = """ { "id": 123, "title": "title1", "number": 1 } """
+        val issue = forgeDeserializerOf(issueInfoDeserializer).deserialize(content)
+        assertNotNull(issue)
+        assertEquals(issue.id, 123)
     }
 
     @Test(expected = JSONException::class)
@@ -127,7 +126,7 @@ class FuelForgeTest : MockHttpTestCase() {
 
     @Test
     fun `check forge items with size and first id`() {
-       val content = """ [
+        val content = """ [
             { "id": 123, "title": "title1", "number": 1 },
             { "id": 456, "title": "title2" }
         ] """

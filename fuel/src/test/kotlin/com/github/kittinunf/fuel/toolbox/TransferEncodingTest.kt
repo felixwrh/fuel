@@ -6,16 +6,16 @@ import com.github.kittinunf.fuel.core.Method
 import com.github.kittinunf.fuel.core.awaitByteArrayResponseResult
 import com.github.kittinunf.fuel.test.MockHttpTestCase
 import com.github.kittinunf.fuel.util.encode
+import java.io.ByteArrayOutputStream
+import kotlin.test.assertEquals
+import kotlin.test.assertNotNull
+import kotlin.test.assertNull
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
 import org.junit.Assert.assertArrayEquals
 import org.junit.Test
 import org.mockserver.model.Header
-import java.io.ByteArrayOutputStream
-import kotlin.test.assertEquals
-import kotlin.test.assertNotNull
-import kotlin.test.assertNull
 
 class TransferEncodingTest : MockHttpTestCase() {
 

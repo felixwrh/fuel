@@ -8,7 +8,7 @@ plugins {
     kotlin("jvm") version Kotlin.version apply false
     id(Android.libPlugin) version Android.version apply false
     id(KotlinX.Serialization.plugin) version Kotlin.version apply false
-    //id(Ktlint.plugin) version Ktlint.version apply false
+    id(Ktlint.plugin) version Ktlint.version apply false
 
     `maven-publish`
     id(Release.Bintray.plugin) version Release.Bintray.version
@@ -131,12 +131,8 @@ subprojects {
         apply {
             plugin(Release.MavenPublish.plugin)
             plugin(Release.Bintray.plugin)
-            //plugin(Ktlint.plugin)
+            plugin(Ktlint.plugin)
         }
-
-        /*configure<KotlinterExtension> {
-            reporters = arrayOf(ReporterType.plain.name, ReporterType.checkstyle.name)
-        }*/
 
         tasks.withType<Test> {
             testLogging {

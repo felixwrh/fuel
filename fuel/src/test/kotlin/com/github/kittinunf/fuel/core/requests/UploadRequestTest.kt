@@ -11,6 +11,9 @@ import com.github.kittinunf.fuel.core.awaitResponseResult
 import com.github.kittinunf.fuel.core.awaitStringResponseResult
 import com.github.kittinunf.fuel.test.MockHttpTestCase
 import com.github.kittinunf.fuel.test.MockReflected
+import java.io.File
+import java.io.FileNotFoundException
+import java.net.HttpURLConnection
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
@@ -22,9 +25,6 @@ import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertThat
 import org.junit.Test
-import java.io.File
-import java.io.FileNotFoundException
-import java.net.HttpURLConnection
 
 class UploadRequestTest : MockHttpTestCase() {
     private val currentDir = File(System.getProperty("user.dir"), "src/test/assets")
@@ -313,7 +313,7 @@ class UploadRequestTest : MockHttpTestCase() {
                     .awaitResponseResult(MockReflected.Deserializer())
         }
 
-        val ( _, result) = assertFileUploaded(file, triple)
+        val (_, result) = assertFileUploaded(file, triple)
         val (data, _) = result
 
         val body = data!!.body!!.string

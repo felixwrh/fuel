@@ -15,7 +15,6 @@ import com.github.kittinunf.fuel.util.decode
 import java.io.ByteArrayInputStream
 import java.io.IOException
 import java.io.InputStream
-import java.lang.ref.WeakReference
 import java.net.HttpURLConnection
 import java.net.Proxy
 import javax.net.ssl.HttpsURLConnection

@@ -3,15 +3,15 @@ package com.github.kittinunf.fuel.core
 import com.github.kittinunf.fuel.core.requests.DefaultBody
 import com.github.kittinunf.fuel.test.MockHttpTestCase
 import com.github.kittinunf.fuel.util.decodeBase64
+import java.io.ByteArrayInputStream
+import java.net.URLConnection
+import java.util.Random
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import org.mockserver.model.BinaryBody
-import java.io.ByteArrayInputStream
-import java.net.URLConnection
-import java.util.Random
 
 class BodyRepresentationTest : MockHttpTestCase() {
     private val manager: FuelManager by lazy { FuelManager() }

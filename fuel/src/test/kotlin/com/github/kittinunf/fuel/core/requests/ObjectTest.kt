@@ -1,19 +1,19 @@
 package com.github.kittinunf.fuel.core.requests
 
 import com.github.kittinunf.fuel.Fuel
-import com.github.kittinunf.fuel.core.awaitResponseResult
 import com.github.kittinunf.fuel.core.FuelError
 import com.github.kittinunf.fuel.core.Method
 import com.github.kittinunf.fuel.core.Request
 import com.github.kittinunf.fuel.core.ResponseDeserializable
+import com.github.kittinunf.fuel.core.awaitResponseResult
 import com.github.kittinunf.fuel.test.MockHttpTestCase
+import java.util.UUID
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotNull
 import org.junit.Test
-import java.util.UUID
 
 private data class UUIDResponse(val uuid: String)
 

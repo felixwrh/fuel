@@ -4,16 +4,16 @@ import com.github.kittinunf.fuel.Fuel
 import com.github.kittinunf.fuel.core.Method
 import com.github.kittinunf.fuel.core.awaitByteArrayResponseResult
 import com.github.kittinunf.fuel.test.MockHttpTestCase
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.runBlocking
-import kotlinx.coroutines.withContext
-import org.hamcrest.CoreMatchers.equalTo
-import org.hamcrest.MatcherAssert.assertThat
 import java.net.HttpURLConnection
 import java.util.Random
 import kotlin.test.Test
 import kotlin.test.assertNotNull
 import kotlin.test.assertNull
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.withContext
+import org.hamcrest.CoreMatchers.equalTo
+import org.hamcrest.MatcherAssert.assertThat
 
 class ByteArrayTest : MockHttpTestCase() {
 

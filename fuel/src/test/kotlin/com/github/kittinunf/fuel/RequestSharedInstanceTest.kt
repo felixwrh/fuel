@@ -8,11 +8,6 @@ import com.github.kittinunf.fuel.core.Request
 import com.github.kittinunf.fuel.core.RequestFactory
 import com.github.kittinunf.fuel.core.awaitStringResponseResult
 import com.github.kittinunf.fuel.test.MockHttpTestCase
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.runBlocking
-import kotlinx.coroutines.withContext
-import org.hamcrest.CoreMatchers.containsString
-import org.hamcrest.MatcherAssert.assertThat
 import java.io.File
 import java.net.HttpURLConnection
 import kotlin.test.AfterTest
@@ -21,6 +16,11 @@ import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertNotNull
 import kotlin.test.assertNull
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.withContext
+import org.hamcrest.CoreMatchers.containsString
+import org.hamcrest.MatcherAssert.assertThat
 
 class RequestSharedInstanceTest : MockHttpTestCase() {
 

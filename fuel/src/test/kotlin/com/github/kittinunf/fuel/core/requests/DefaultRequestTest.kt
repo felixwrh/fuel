@@ -2,10 +2,10 @@ package com.github.kittinunf.fuel.core.requests
 
 import com.github.kittinunf.fuel.core.Headers
 import com.github.kittinunf.fuel.core.Method
+import java.net.URL
 import org.hamcrest.MatcherAssert.assertThat
 import org.hamcrest.core.StringContains.containsString
 import org.junit.Test
-import java.net.URL
 
 class DefaultRequestTest {
     @Test

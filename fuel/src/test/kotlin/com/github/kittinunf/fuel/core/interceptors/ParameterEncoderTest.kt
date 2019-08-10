@@ -5,13 +5,13 @@ import com.github.kittinunf.fuel.core.Headers
 import com.github.kittinunf.fuel.core.Method
 import com.github.kittinunf.fuel.core.requests.DefaultRequest
 import com.github.kittinunf.fuel.core.requests.upload
+import java.io.ByteArrayInputStream
+import java.net.URL
 import org.hamcrest.CoreMatchers.equalTo
 import org.hamcrest.CoreMatchers.not
 import org.hamcrest.MatcherAssert.assertThat
 import org.hamcrest.core.StringContains.containsString
 import org.junit.Test
-import java.io.ByteArrayInputStream
-import java.net.URL
 
 class ParameterEncoderTest {
     @Test

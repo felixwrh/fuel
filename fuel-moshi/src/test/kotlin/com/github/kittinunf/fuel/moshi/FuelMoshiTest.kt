@@ -10,16 +10,16 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonAdapter
 import com.squareup.moshi.JsonReader
 import com.squareup.moshi.JsonWriter
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.runBlocking
-import kotlinx.coroutines.withContext
-import org.hamcrest.CoreMatchers.isA
-import org.junit.Assert.assertThat
 import java.net.HttpURLConnection
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertNotNull
 import kotlin.test.assertNull
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.withContext
+import org.hamcrest.CoreMatchers.isA
+import org.junit.Assert.assertThat
 
 class FuelMoshiTest : MockHttpTestCase() {
     data class HttpBinUserAgentModel(var userAgent: String = "")

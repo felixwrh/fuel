@@ -1,12 +1,12 @@
 package com.github.kittinunf.fuel.core.extensions
 
-import com.github.kittinunf.fuel.core.requests.DefaultRequest
 import com.github.kittinunf.fuel.core.Headers
 import com.github.kittinunf.fuel.core.Method
+import com.github.kittinunf.fuel.core.requests.DefaultRequest
+import java.net.URL
 import org.hamcrest.CoreMatchers
 import org.hamcrest.MatcherAssert
 import org.junit.Test
-import java.net.URL
 
 class FormattingTest {
 

@@ -10,16 +10,16 @@ import com.github.kittinunf.fuel.core.RequestFactory
 import com.github.kittinunf.fuel.core.awaitByteArrayResponseResult
 import com.github.kittinunf.fuel.core.awaitStringResponseResult
 import com.github.kittinunf.fuel.test.MockHttpTestCase
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.runBlocking
-import kotlinx.coroutines.withContext
-import org.hamcrest.CoreMatchers.containsString
-import org.hamcrest.MatcherAssert.assertThat
 import java.io.File
 import java.net.HttpURLConnection
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertNotNull
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.withContext
+import org.hamcrest.CoreMatchers.containsString
+import org.hamcrest.MatcherAssert.assertThat
 
 class BlockingRequestTest : MockHttpTestCase() {
     private val manager: FuelManager by lazy { FuelManager() }

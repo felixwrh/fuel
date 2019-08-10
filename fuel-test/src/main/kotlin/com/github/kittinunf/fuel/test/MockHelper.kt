@@ -4,6 +4,7 @@ import com.github.kittinunf.fuel.core.Headers
 import com.github.kittinunf.fuel.core.Parameters
 import com.github.kittinunf.fuel.core.ResponseDeserializable
 import com.github.kittinunf.fuel.util.decodeBase64
+import java.net.URL
 import org.json.JSONArray
 import org.json.JSONObject
 import org.mockserver.integration.ClientAndServer
@@ -12,7 +13,6 @@ import org.mockserver.model.HttpRequest
 import org.mockserver.model.HttpResponse
 import org.mockserver.model.HttpTemplate
 import org.slf4j.event.Level
-import java.net.URL
 
 class MockHelper {
 

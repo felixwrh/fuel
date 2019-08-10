@@ -13,14 +13,14 @@ import com.google.gson.JsonPrimitive
 import com.google.gson.JsonSerializationContext
 import com.google.gson.JsonSerializer
 import com.google.gson.reflect.TypeToken
+import java.lang.reflect.Type
+import java.net.HttpURLConnection
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotNull
 import org.junit.Test
-import java.lang.reflect.Type
-import java.net.HttpURLConnection
 
 private typealias IssuesList = List<IssueInfo>
 
@@ -86,7 +86,7 @@ class FuelGsonTest : MockHttpTestCase() {
 
     @Test
     fun `processing generic list`() = runBlocking {
-       mock.chain(
+        mock.chain(
             request = mock.request().withPath("/issues"),
             response = mock.response().withBody("[ " +
                 "{ \"id\": 1, \"title\": \"issue 1\", \"number\": null }, " +

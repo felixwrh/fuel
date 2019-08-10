@@ -1,21 +1,21 @@
 package com.github.kittinunf.fuel
 
 import com.github.kittinunf.fuel.core.Client
-import com.github.kittinunf.fuel.core.requests.DefaultBody
 import com.github.kittinunf.fuel.core.FuelManager
 import com.github.kittinunf.fuel.core.Method
 import com.github.kittinunf.fuel.core.Request
 import com.github.kittinunf.fuel.core.Response
 import com.github.kittinunf.fuel.core.awaitByteArrayResponseResult
+import com.github.kittinunf.fuel.core.requests.DefaultBody
+import java.io.File
+import java.nio.charset.Charset
+import kotlin.test.assertNotNull
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
 import org.hamcrest.CoreMatchers.containsString
 import org.junit.Assert.assertThat
 import org.junit.Test
-import java.io.File
-import java.nio.charset.Charset
-import kotlin.test.assertNotNull
 
 class CustomClientTest {
     private val manager: FuelManager by lazy {

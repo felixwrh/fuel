@@ -1,14 +1,14 @@
 package com.github.kittinunf.fuel.core.requests
 
 import com.github.kittinunf.fuel.core.Method
-import org.hamcrest.CoreMatchers
-import org.hamcrest.CoreMatchers.equalTo
-import org.hamcrest.MatcherAssert.assertThat
-import org.junit.Test
 import java.io.ByteArrayInputStream
 import java.io.ByteArrayOutputStream
 import java.net.URL
 import kotlin.test.assertEquals
+import org.hamcrest.CoreMatchers
+import org.hamcrest.CoreMatchers.equalTo
+import org.hamcrest.MatcherAssert.assertThat
+import org.junit.Test
 
 class RepeatableBodyTest {
 
@@ -37,7 +37,7 @@ class RepeatableBodyTest {
 
                     body.writeTo(output)
                     assertEquals(output.toString(), String(value))
-                    assertEquals(body.isConsumed(),false)
+                    assertEquals(body.isConsumed(), false)
                 }
     }
 
