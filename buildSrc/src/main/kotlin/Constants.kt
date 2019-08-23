@@ -107,13 +107,13 @@ object Jackson {
 
 object KotlinX {
     object Coroutines {
-        const val version = "1.3.0-RC2"
+        const val version = "1.3.0"
         const val android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$version"
         const val jvm = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$version"
     }
 
     object Serialization {
-        const val version = "0.11.1"
+        const val version = "0.12.0"
         const val dependency = "org.jetbrains.kotlinx:kotlinx-serialization-runtime:$version"
         const val plugin = "kotlinx-serialization"
     }
