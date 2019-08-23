@@ -139,6 +139,7 @@ subprojects {
                 // set options for log level LIFECYCLE
                 events = mutableSetOf(TestLogEvent.FAILED)
                 exceptionFormat = TestExceptionFormat.FULL
+                showStandardStreams = true
             }
         }
 
